@@ -19,11 +19,20 @@
 </head>
 <body>
 	<div class="container">
-		<div class="nav bg-light mt-5 h4 p-3">Employee List</div>
-		<hr>
+		<div class="card bg-light mt-5 mb-3 h4 p-3">Employee List</div>
+	
 		<!-- add employee button -->
-		<a th:href="@{/employees/showAddForm}" class=" btn btn-sm btn-info col-3 mb-3">Add Employee</a>
-		<table class="table table-bordered table-striped " 
+		<a th:href="@{/employees/showAddForm}" 
+		   class=" btn btn-sm btn-info col-3 mb-3">
+		Add Employee
+		</a>
+		<form action="">
+		<input oninput="w3.filterHTML('#tab1', '.item', this.value)" 	
+			   placeholder="Search ..."
+			   class="form-control">
+
+		</form>
+		<table class="table table-bordered table-striped roubded" 
 			   id="tab1">
 
 			<thead class="table-dark">
